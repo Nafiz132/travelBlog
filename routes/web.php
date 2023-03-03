@@ -23,3 +23,5 @@ Route::post('/blog/create/post', [\App\Http\Controllers\BlogPostController::clas
 Route::get('/blog/{blogPost}/edit', [\App\Http\Controllers\BlogPostController::class, 'edit']); 
 Route::put('/blog/{blogPost}/edit', [\App\Http\Controllers\BlogPostController::class, 'update']);  
 Route::delete('/blog/{blogPost}', [\App\Http\Controllers\BlogPostController::class, 'destroy']); 
+Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload');
+Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
